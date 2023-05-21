@@ -1,20 +1,45 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from "react";
+import { View, Text } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { MaterialCommunityIcons } from "react-native-vector-icons";
 
-export default function App() {
+import HomeScreen from "./Navigation/HomeScreen";
+import AddDog from "./Navigation/AddDog";
+const Tab = createMaterialBottomTabNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator
+        initialRouteName="Home"
+        activeColor="blue"
+        inactiveColor="#3e2465"
+        barStyle={{ paddingBottom: 0 }}
+      >
+        <Tab.Screen
+          name="Dogs"
+          component={HomeScreen}
+          options={{
+            tabBarLabel: "Updates",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="dog" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="AddDog"
+          component={AddDog}
+          options={{
+            tabBarLabel: "Add a Dog",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="plus" color={color} size={26} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
