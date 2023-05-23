@@ -1,8 +1,7 @@
 import * as React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button, TouchableOpacity } from "react-native";
 import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { Fumi } from "react-native-textinput-effects";
-
 export default function AddDog({ navigation }) {
   return (
     <View style={{ alignItems: "center", justifyContent: "center" }}>
@@ -26,6 +25,9 @@ export default function AddDog({ navigation }) {
         iconWidth={40}
         inputPadding={16}
       />
+      <TouchableOpacity style={styles.button} onPress={() => alert("yes")}>
+        <Text style={styles.buttonText}>Add Dog</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -37,5 +39,16 @@ const styles = StyleSheet.create({
   },
   second: {
     width: "90%",
+  },
+  button: {
+    paddingVertical: 15,
+    paddingHorizontal: 40,
+    borderRadius: 20,
+    backgroundColor: "#f95a25",
+    marginTop: 20,
+  },
+  buttonText: {
+    fontSize: 17,
+    fontWeight: "bold",
   },
 });

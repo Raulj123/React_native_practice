@@ -8,7 +8,7 @@ export default function HomeScreen({ navigation }) {
         onPress={() => alert("Dogs")}
         style={{ fontSize: 26, fontWeight: "bold" }}
       >
-        Dogs here
+        Remove
       </Text>
     </View>
   );
