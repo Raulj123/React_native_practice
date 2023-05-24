@@ -5,7 +5,7 @@
 
 ## Progress of UI
 ### Add a dog page
-<img src="https://media.discordapp.net/attachments/1070139130081706068/1110797380837724200/IMG_3261.png?width=220&height=476" >
+<img src="https://media.discordapp.net/attachments/1070139130081706068/1110801091190337596/IMG_3263.png?width=220&height=476" >
 
 
 ## Features 
