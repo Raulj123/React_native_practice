@@ -43,7 +43,7 @@ export default function AddDog({ navigation }) {
 }
 const styles = StyleSheet.create({
   first: {
-    marginTop: "30%",
+    marginTop: "15%",
     width: "90%",
     margin: 10,
   },
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     borderRadius: 20,
     backgroundColor: "#f95a25",
-    marginTop: 20,
+    marginTop: 25,
   },
   buttonText: {
     fontSize: 17,
