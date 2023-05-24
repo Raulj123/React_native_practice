@@ -4,7 +4,17 @@ import FontAwesomeIcon from "react-native-vector-icons/FontAwesome";
 import { Fumi } from "react-native-textinput-effects";
 export default function AddDog({ navigation }) {
   return (
-    <View style={{ alignItems: "center", justifyContent: "center" }}>
+    <View
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: "#476491",
+        flex: 1,
+      }}
+    >
+      <Text style={{ fontSize: 30, fontWeight: "bold", color: "white" }}>
+        Add your pet here!
+      </Text>
       <Fumi
         style={styles.first}
         label={"Dogs Name"}
@@ -33,7 +43,7 @@ export default function AddDog({ navigation }) {
 }
 const styles = StyleSheet.create({
   first: {
-    marginTop: "70%",
+    marginTop: "30%",
     width: "90%",
     margin: 10,
   },

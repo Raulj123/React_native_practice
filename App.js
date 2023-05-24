@@ -11,53 +11,50 @@ const Tab = createMaterialBottomTabNavigator();
 
 function App() {
   return (
-    <View style={styles.container}>
-      <NavigationContainer>
-        <Tab.Navigator
-          initialRouteName="Home"
-          activeColor="blue"
-          inactiveColor="#3e2465"
-          barStyle={{ paddingBottom: 0 }}
-        >
-          <Tab.Screen
-            name="Dogs"
-            component={Home}
-            options={{
-              tabBarLabel: "Dogs",
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="dog" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="AddDog"
-            component={AddDog}
-            options={{
-              tabBarLabel: "Add a Dog",
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="plus" color={color} size={26} />
-              ),
-            }}
-          />
-          <Tab.Screen
-            name="Remove"
-            component={RemoveDog}
-            options={{
-              tabBarLabel: "Remove a Dog",
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="cancel" color={color} size={26} />
-              ),
-            }}
-          />
-        </Tab.Navigator>
-      </NavigationContainer>
-    </View>
+    <NavigationContainer style={styles.container}>
+      <Tab.Navigator
+        initialRouteName="Home"
+        activeColor="#f95a25"
+        inactiveColor="#3e2465"
+        barStyle={{ paddingBottom: 0 }}
+      >
+        <Tab.Screen
+          name="Dogs"
+          component={Home}
+          options={{
+            tabBarLabel: "Updates",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="dog" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="AddDog"
+          component={AddDog}
+          options={{
+            tabBarLabel: "Add a Dog",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="plus" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Remove"
+          component={RemoveDog}
+          options={{
+            tabBarLabel: "Remove a Dog",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="cancel" color={color} size={26} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: "yellow",
+    backgroundColor: "red",
   },
 });
 export default App;
